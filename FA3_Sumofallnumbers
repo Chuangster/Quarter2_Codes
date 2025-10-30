@@ -1,0 +1,11 @@
+
+def sum_of_numbers(age):
+    total_sum = 0
+    for number in range(1, age + 1):
+        total_sum += number
+    return total_sum
+
+if __name__ == "__main__":
+    user_age = int(input("Hi there! Please enter your age: "))
+    result = sum_of_numbers(user_age)
+    print(f"The sum of all numbers from 1 to {user_age} is: {result}")
