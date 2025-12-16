@@ -1,0 +1,27 @@
+# Number of students and subjects
+num_students = int(input("Enter the number of students: "))
+num_subjects = int(input("Enter the number of subjects per student: "))
+
+# Initialize variables
+class_total = 0
+
+# Loop through each student
+for i in range(num_students):
+    student_total = 0
+    print(f"\nEntering scores for Student {i + 1}:")
+    
+    # Loop through each subject
+    for j in range(num_subjects):
+        score = float(input(f"Enter score for Subject {j + 1}: "))
+        student_total += score
+    
+    # Calculate average for the student
+    student_average = student_total / num_subjects
+    print(f"Average score for Student {i + 1}: {student_average:.2f}")
+    
+    # Add to class total
+    class_total += student_average
+
+# Calculate overall class average
+class_average = class_total / num_students
+print(f"\nOverall class average: {class_average:.2f}")
