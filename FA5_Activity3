@@ -1,0 +1,23 @@
+# Travel Itinerary Updater
+
+# Initialize the travel destinations array
+destinations = []
+
+# User input for five travel destinations
+for i in range(5):
+    destination = input(f"Enter travel destination {i + 1}: ")
+    destinations.append(destination)
+
+# Display the current list of destinations
+print("\nCurrent travel destinations:")
+for index, destination in enumerate(destinations, start=1):
+    print(f"{index}. {destination}")
+
+# Update the second and fifth destinations
+destinations[1] = input("\nUpdate the second destination: ")
+destinations[4] = input("Update the fifth destination: ")
+
+# Display the updated list of destinations
+print("\nUpdated travel destinations:")
+for index, destination in enumerate(destinations, start=1):
+    print(f"{index}. {destination}")
